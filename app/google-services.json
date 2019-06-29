@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "529907434193",
+    "firebase_url": "https://licoreriamateo.firebaseio.com",
+    "project_id": "licoreriamateo",
+    "storage_bucket": "licoreriamateo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529907434193:android:3e9e064259aa32e7",
+        "android_client_info": {
+          "package_name": "com.example.licoreriamateo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529907434193-vrs12l78pkqhdt6chf4vibiub4p6iki8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.licoreriamateo",
+            "certificate_hash": "285ebb08c28d5f124da925f8601684d5e3df5759"
+          }
+        },
+        {
+          "client_id": "529907434193-ja0gffg9ia8umvkk7v36ep5ds844bcgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWZcgs6xlO7rUC8SKOM3bh0oVKQvp599M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529907434193-ja0gffg9ia8umvkk7v36ep5ds844bcgi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
