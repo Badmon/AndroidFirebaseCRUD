@@ -43,9 +43,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.icon_add:{
                 if(nombre.equals("")){
                     validacion();
+                }else {
+
+                    Toast.makeText(this, "Agregar", Toast.LENGTH_LONG).show();
+                    limpiarCajar();
+                    break;
                 }
-                Toast.makeText(this,"Agregar",Toast.LENGTH_LONG).show();
-                break;
             }
 
             case R.id.icon_save:{
@@ -60,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
             default:break;
         }
         return true;
+    }
+
+    private void limpiarCajar() {
+
     }
 
     private void validacion() {
