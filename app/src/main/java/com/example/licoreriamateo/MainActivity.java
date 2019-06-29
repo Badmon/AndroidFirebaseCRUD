@@ -39,9 +39,13 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         //switch
         String nombre = nomP.getText().toString();
+        String correo = correoP.getText().toString();
+        String password = passwordP.getText().toString();
+        String app = appP.getText().toString();
+
         switch (item.getItemId()){
             case R.id.icon_add:{
-                if(nombre.equals("")){
+                if(nombre.equals("")||correo.equals("")||password.equals("")||app.equals("")){
                     validacion();
                 }else {
 
@@ -67,6 +71,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void limpiarCajar() {
 
+        nomP.setText("");
+        correoP.setText("");
+        passwordP.setText("");
+        appP.setText("");
     }
 
     private void validacion() {
