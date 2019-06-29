@@ -2,11 +2,11 @@ package com.example.licoreriamateo.models;
 
 public class Producto {
 
-    public String pid;
-    public String Nombre;
-    public String Apellido;
-    public String Correo;
-    public String Password;
+    private String pid;
+    private String Nombre;
+    private String Apellido;
+    private String Correo;
+    private String Password;
 
     public String getPassword() {
         return Password;

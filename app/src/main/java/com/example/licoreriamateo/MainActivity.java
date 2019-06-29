@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
         listV_personas = findViewById(R.id.lv_datosProductos);
         inicializarFirebase();
 
-
-
     }
 
     private void inicializarFirebase() {
@@ -77,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
                     databaseReference.child("Producto").child(p.getPid()).setValue(p);
                     Toast.makeText(this, "Agregar", Toast.LENGTH_LONG).show();
                     limpiarCajar();
-                    break;
-                }
+
+                }break;
             }
 
             case R.id.icon_save:{
