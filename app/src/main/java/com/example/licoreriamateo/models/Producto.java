@@ -6,6 +6,15 @@ public class Producto {
     public String Nombre;
     public String Apellido;
     public String Correo;
+    public String Password;
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
+    }
 
     public Producto() {
 

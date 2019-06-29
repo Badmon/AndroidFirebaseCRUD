@@ -10,10 +10,13 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.licoreriamateo.models.Producto;
 import com.google.firebase.FirebaseApiNotAvailableException;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -65,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
                 if(nombre.equals("")||correo.equals("")||password.equals("")||app.equals("")){
                     validacion();
                 }else {
+                    Producto p = new Producto();
+                    p.setPid(UUID.randomUUID().toString());
+                    p.setNombre(nombre);
+                    p.setApellido(app);
+                    p.setCorreo(correo);
+                    p.setPassword(password);
+                    databaseReference.child("Producto").child(p.getPid()).setValue(p);
                     Toast.makeText(this, "Agregar", Toast.LENGTH_LONG).show();
                     limpiarCajar();
                     break;
