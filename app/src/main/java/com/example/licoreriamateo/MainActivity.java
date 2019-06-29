@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
                 if(nombre.equals("")||correo.equals("")||password.equals("")||app.equals("")){
                     validacion();
                 }else {
-
                     Toast.makeText(this, "Agregar", Toast.LENGTH_LONG).show();
                     limpiarCajar();
                     break;
@@ -79,10 +78,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void validacion() {
         String nombre = nomP.getText().toString();
-
-
+        String correo = correoP.getText().toString();
+        String password = passwordP.getText().toString();
+        String app = appP.getText().toString();
         if (nombre.equals("")){
             nomP.setError("Required");
         }
+        else if(app.equals("")){
+            appP.setError("Required");
+        }
+        else if(correo.equals("")){
+            correoP.setError("Required");
+        }
+        else if(password.equals("")){
+            passwordP.setError("Required");
+        }
+
     }
 }
