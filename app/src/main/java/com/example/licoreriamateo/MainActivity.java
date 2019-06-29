@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     private void validacion() {
         String nombre = nomP.getText().toString();
 
+
         if (nombre.equals("")){
             nomP.setError("Required");
         }
