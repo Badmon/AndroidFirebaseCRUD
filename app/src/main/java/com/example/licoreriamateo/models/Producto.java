@@ -8,14 +8,6 @@ public class Producto {
     private String Correo;
     private String Password;
 
-    public String getPassword() {
-        return Password;
-    }
-
-    public void setPassword(String password) {
-        Password = password;
-    }
-
     public Producto() {
     }
 
@@ -51,8 +43,17 @@ public class Producto {
         Correo = correo;
     }
 
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
+    }
+
     @Override
     public String toString() {
-        return Nombre;
+        return "Nombre: "+Nombre+"\n"+"Apellido: "+Apellido+"\n"+"Correo: "+Correo+"\n"+"Password: "+Password;
     }
+
 }
