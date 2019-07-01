@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -13,12 +14,20 @@ import android.widget.Toast;
 import com.example.licoreriamateo.models.Producto;
 import com.google.firebase.FirebaseApiNotAvailableException;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
+
+    private List<Producto> listProducto = new ArrayList<Producto>();
+    ArrayAdapter<Producto> arrayAdapterProducto;
 
     EditText nomP, appP, correoP, passwordP;
     ListView listV_personas;
@@ -38,7 +47,21 @@ public class MainActivity extends AppCompatActivity {
 
         listV_personas = findViewById(R.id.lv_datosProductos);
         inicializarFirebase();
+        listarDatos();
+    }
 
+    private void listarDatos() {
+        databaseReference.child("Producto").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private void inicializarFirebase() {
