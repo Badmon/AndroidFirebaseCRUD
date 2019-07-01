@@ -54,7 +54,14 @@ public class MainActivity extends AppCompatActivity {
         databaseReference.child("Producto").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                listProducto.clear();
+                for(DataSnapshot objSnaptshot : dataSnapshot.getChildren()){
+                    Producto p = objSnaptshot.getValue(Producto.class);
+                    listProducto.add(p);
 
+                    arrayAdapterProducto = new ArrayAdapter<Producto>(MainActivity.this, android.R.layout.simple_list_item_1, listProducto);
+                    listV_personas.setAdapter(arrayAdapterProducto);
+                }
             }
 
             @Override
