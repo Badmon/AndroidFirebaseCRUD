@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             case R.id.icon_save:{
+                Producto p = new Producto();
 
                 Toast.makeText(this,"Guardar",Toast.LENGTH_LONG).show();
                 break;
