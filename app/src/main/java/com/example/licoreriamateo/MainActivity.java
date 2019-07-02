@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
+    Producto productoSelected;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,18 @@ public class MainActivity extends AppCompatActivity {
         listV_personas = findViewById(R.id.lv_datosProductos);
         inicializarFirebase();
         listarDatos();
+
+        listV_personas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                productoSelected = (Producto) adapterView.getItemAtPosition(i);
+
+                nomP.setText(productoSelected.getNombre());
+                appP.setText(productoSelected.getApellido());
+                correoP.setText(productoSelected.getCorreo());
+                passwordP.setText(productoSelected.getPassword());
+            }
+        });
     }
 
     private void listarDatos() {
@@ -66,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         });
     }
@@ -110,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             case R.id.icon_save:{
+
                 Toast.makeText(this,"Guardar",Toast.LENGTH_LONG).show();
                 break;
             }
