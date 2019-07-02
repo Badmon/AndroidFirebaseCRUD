@@ -139,7 +139,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
             case R.id.icon_delete:{
-                Toast.makeText(this,"Eliminar",Toast.LENGTH_LONG).show();
+                Producto p = new Producto();
+                p.setPid(productoSelected.getPid());
+                databaseReference.child("Producto").child(p.getPid()).removeValue();
+                Toast.makeText(this,"Eliminado", Toast.LENGTH_LONG).show();
+                limpiarCajar();
                 break;
             }
             default:break;
