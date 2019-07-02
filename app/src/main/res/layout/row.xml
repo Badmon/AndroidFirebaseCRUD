@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     app:cardBackgroundColor="#fff"
     app:cardCornerRadius="3dp"
     android:elevation="3dp"
@@ -27,7 +27,7 @@
         <ImageView
             android:id="@+id/rImageView"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
             android:background="@drawable/load"/>
@@ -40,7 +40,6 @@
             android:textSize="20sp"
 
             />
-        
 
     </LinearLayout>
 
