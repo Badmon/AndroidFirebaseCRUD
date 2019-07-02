@@ -3,12 +3,14 @@ package com.example.licoreriamateo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Producto> listProducto = new ArrayList<Producto>();
     ArrayAdapter<Producto> arrayAdapterProducto;
 
+    Button btn_buscar;
     EditText nomP, appP, correoP, passwordP;
     ListView listV_personas;
 
@@ -43,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btn_buscar = findViewById(R.id.btnBuscar);
 
         nomP = findViewById(R.id.txt_nombre);
         appP = findViewById(R.id.txt_apellido);
@@ -64,7 +69,22 @@ public class MainActivity extends AppCompatActivity {
                 passwordP.setText(productoSelected.getPassword());
             }
         });
+
+
+        btn_buscar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+
+                Intent intentReg = new Intent(MainActivity.this, PostsListActivity.class);
+                MainActivity.this.startActivity(intentReg);
+            }
+        });
     }
+
+//BTN Buscar
+
+
+
 
     private void listarDatos() {
         databaseReference.child("Producto").addValueEventListener(new ValueEventListener() {
