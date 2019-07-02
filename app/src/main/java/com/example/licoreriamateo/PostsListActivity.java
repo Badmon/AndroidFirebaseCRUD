@@ -58,7 +58,7 @@ public class PostsListActivity extends AppCompatActivity {
                     @Override
                     protected void populateViewHolder(ViewHolder viewHolder, Producto producto, int i) {
 
-                        viewHolder.setDetails(getApplicationContext(),producto.getNombre(),"Descripción: "+producto.getApellido(),"Precio: "+producto.getPassword(),producto.getCorreo());
+                        viewHolder.setDetails(getApplicationContext(),producto.getNombre(),"Descripción: "+producto.getApellido(),"Precio: S/."+producto.getPassword(),producto.getCorreo());
 
                     }
                 };

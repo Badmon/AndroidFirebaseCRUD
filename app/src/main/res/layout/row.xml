@@ -21,13 +21,13 @@
             android:layout_height="wrap_content"
             android:text="Title"
             android:textColor="#000"
-            android:textSize="22sp"
+            android:textSize="34sp"
             android:textStyle="bold"
             />
         <ImageView
             android:id="@+id/rImageView"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
             android:background="@drawable/load"/>
@@ -37,14 +37,18 @@
             android:text="DESCRIPCION"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="24sp"
             />
         <TextView
             android:id="@+id/rPasswordTv"
             android:text="PRECIO"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="24sp"
             />
 
     </LinearLayout>

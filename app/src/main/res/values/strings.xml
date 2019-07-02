@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">LicoreriaMateo</string>
+    <string name="app_name">Licoreria de Mateo</string>
+    <string name="app_name2">Catálogo</string>
 </resources>
