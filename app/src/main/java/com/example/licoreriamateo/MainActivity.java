@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Producto> listProducto = new ArrayList<Producto>();
     ArrayAdapter<Producto> arrayAdapterProducto;
 
-    Button btn_buscar;
+    Button btn_buscar,btn_limpiar;
     EditText nomP, appP, correoP, passwordP;
     ListView listV_personas;
 
@@ -48,9 +48,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btn_buscar = findViewById(R.id.btnBuscar);
+        btn_limpiar = findViewById(R.id.btnLimpiar);
 
         nomP = findViewById(R.id.txt_nombre);
-        appP = findViewById(R.id.txt_apellido);
+        appP = findViewById(R.id.txt_data);
         correoP = findViewById(R.id.txt_correo);
         passwordP = findViewById(R.id.txt_password);
 
@@ -77,6 +78,17 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intentReg = new Intent(MainActivity.this, PostsListActivity.class);
                 MainActivity.this.startActivity(intentReg);
+            }
+        });
+
+        btn_limpiar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                nomP.setText("");
+                correoP.setText("");
+                passwordP.setText("");
+                appP.setText("");
+
             }
         });
     }

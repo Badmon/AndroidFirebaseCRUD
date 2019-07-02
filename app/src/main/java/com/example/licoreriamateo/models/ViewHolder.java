@@ -21,14 +21,16 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         mView = itemView;
     }
 
-    public void setDetails(Context ctx, String Nombre,String Apellido, String Correo){
+    public void setDetails(Context ctx, String Nombre,String Apellido,String Password ,String Correo){
 
         TextView mTitleTv = mView.findViewById(R.id.rTitleTv);
         TextView mApellidoTv = mView.findViewById(R.id.rDescriptionTv);
+        TextView mPasswordTv = mView.findViewById(R.id.rPasswordTv);
         ImageView mImageTv = mView.findViewById(R.id.rImageView);
         //set data
         mTitleTv.setText(Nombre);
         mApellidoTv.setText(Apellido);
+        mPasswordTv.setText(Password);
         Picasso.get().load(Correo).into(mImageTv);
     }
 }

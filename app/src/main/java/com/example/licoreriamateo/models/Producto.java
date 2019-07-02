@@ -53,7 +53,7 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Nombre: "+Nombre+"\n"+"Apellido: "+Apellido+"\n"+"Correo: "+Correo+"\n"+"Password: "+Password;
+        return "Nombre: "+Nombre+"\n"+"Descripcion: "+Apellido+"\n"+"Precio: "+Password;
     }
 
 }

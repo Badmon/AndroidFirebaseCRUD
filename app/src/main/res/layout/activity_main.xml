@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#6effa3"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="12dp"
@@ -11,7 +12,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre">
+        android:hint="Nombre del Producto">
 
         <EditText
             android:id="@+id/txt_nombre"
@@ -25,10 +26,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Apellido">
+        android:hint="Descripción">
 
         <EditText
-            android:id="@+id/txt_apellido"
+            android:id="@+id/txt_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -39,7 +40,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Correo">
+        android:hint="URL/IMAGEN">
 
         <EditText
             android:id="@+id/txt_correo"
@@ -53,24 +54,44 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password">
+        android:hint="PRECIO">
 
         <EditText
             android:id="@+id/txt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:paddingTop="12dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btnBuscar"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buscar"
-        android:layout_gravity="center"
-        />
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIMPIAR"
+            />
+        <Button
+            android:id="@+id/btnBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CATALOGO"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:background="#000"/>
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,7 +107,5 @@
         android:layout_height="match_parent">
 
     </ListView>
-
-
 
 </LinearLayout>
