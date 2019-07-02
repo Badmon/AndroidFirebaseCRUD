@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
                 p.setApellido(appP.getText().toString().trim());
                 p.setCorreo(correoP.getText().toString().trim());
                 p.setPassword(passwordP.getText().toString().trim());
+                databaseReference.child("Producto").child(p.getPid()).setValue(p);
 
 
                 Toast.makeText(this,"Guardar",Toast.LENGTH_LONG).show();
