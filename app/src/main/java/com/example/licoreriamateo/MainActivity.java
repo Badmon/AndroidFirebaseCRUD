@@ -126,6 +126,12 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.icon_save:{
                 Producto p = new Producto();
+                p.setPid(productoSelected.getPid());
+                p.setNombre(nomP.getText().toString().trim());
+                p.setApellido(appP.getText().toString().trim());
+                p.setCorreo(correoP.getText().toString().trim());
+                p.setPassword(passwordP.getText().toString().trim());
+
 
                 Toast.makeText(this,"Guardar",Toast.LENGTH_LONG).show();
                 break;
