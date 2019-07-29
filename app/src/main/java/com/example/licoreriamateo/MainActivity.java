@@ -95,9 +95,6 @@ public class MainActivity extends AppCompatActivity {
 
 //BTN Buscar
 
-
-
-
     private void listarDatos() {
         databaseReference.child("Producto").addValueEventListener(new ValueEventListener() {
             @Override

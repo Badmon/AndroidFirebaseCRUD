@@ -98,13 +98,13 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
         android:text="Lista de Productos"
-        android:textSize="30dp" />
-
+        android:textSize="20dp" />
 
     <ListView
         android:id="@+id/lv_datosProductos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:dividerHeight="10dp">
 
     </ListView>
 
