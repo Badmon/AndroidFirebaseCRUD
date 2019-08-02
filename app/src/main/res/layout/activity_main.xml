@@ -12,7 +12,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre del Producto">
+        android:hint="NOMBRE DEL PRODUCTO">
 
         <EditText
             android:id="@+id/txt_nombre"
@@ -26,7 +26,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descripción">
+        android:hint="DESCRIPCIÓN">
 
         <EditText
             android:id="@+id/txt_data"
@@ -90,7 +90,6 @@
         android:layout_width="match_parent"
         android:layout_height="2.5dp"
         android:background="#000"/>
-
 
     <TextView
         android:layout_width="wrap_content"
