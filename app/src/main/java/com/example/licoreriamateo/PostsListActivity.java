@@ -55,7 +55,10 @@ public class PostsListActivity extends AppCompatActivity {
 
     //Busqueda
     private void firebaseSearch(String searchText) {
-        Query firebaseSearchQuery = mRef.orderByChild("nombre").startAt(searchText).endAt(searchText + "\uf8ff");
+
+        String query = searchText.toLowerCase();
+
+        Query firebaseSearchQuery = mRef.orderByChild("apellido").startAt(query).endAt(query + "\uf8ff");
 
         FirebaseRecyclerAdapter<Producto, ViewHolder> firebaseRecyclerAdapter =
                 new FirebaseRecyclerAdapter<Producto, ViewHolder>(
@@ -67,7 +70,7 @@ public class PostsListActivity extends AppCompatActivity {
                     @Override
                     protected void populateViewHolder(ViewHolder viewHolder, Producto producto, int i) {
 
-                        viewHolder.setDetails(getApplicationContext(),producto.getNombre(),"Descripción: "+producto.getApellido(),"Precio: S/."+producto.getPassword(),producto.getCorreo());
+                        viewHolder.setDetails(getApplicationContext(),producto.getNombre(),"Descripción: "+producto.getApellido(),"S/"+producto.getPassword()+" soles",producto.getCorreo());
 
                     }
                 };
@@ -90,7 +93,7 @@ public class PostsListActivity extends AppCompatActivity {
                     @Override
                     protected void populateViewHolder(ViewHolder viewHolder, Producto producto, int i) {
 
-                        viewHolder.setDetails(getApplicationContext(),producto.getNombre(),"Descripción: "+producto.getApellido(),"Precio: S/."+producto.getPassword(),producto.getCorreo());
+                        viewHolder.setDetails(getApplicationContext(),producto.getNombre(),"Descripción: "+producto.getApellido(),"S/"+producto.getPassword()+" soles",producto.getCorreo());
 
                     }
                 };
