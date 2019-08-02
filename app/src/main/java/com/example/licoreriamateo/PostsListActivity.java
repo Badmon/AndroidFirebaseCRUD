@@ -45,6 +45,10 @@ public class PostsListActivity extends AppCompatActivity {
 
     }
 
+
+    //Busqueda
+    private void
+
     @Override
     protected void onStart() {
         super.onStart();
