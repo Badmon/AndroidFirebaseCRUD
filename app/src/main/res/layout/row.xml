@@ -24,13 +24,14 @@
             android:textSize="34sp"
             android:textStyle="bold"
             />
+
         <ImageView
             android:id="@+id/rImageView"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
+            android:layout_height="400dp"
             android:adjustViewBounds="true"
-            android:background="@drawable/load"/>
+            android:background="@drawable/load"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/rDescriptionTv"

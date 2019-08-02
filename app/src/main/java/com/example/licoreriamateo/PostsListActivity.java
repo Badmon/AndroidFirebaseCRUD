@@ -126,8 +126,6 @@ public class PostsListActivity extends AppCompatActivity {
             //TODO
             return true;
         }
-
-
         return super.onOptionsItemSelected(item);
 
     }
