@@ -15,7 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
 
-
 import com.example.licoreriamateo.models.Producto;
 import com.example.licoreriamateo.models.ViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -48,17 +47,14 @@ public class PostsListActivity extends AppCompatActivity {
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mRef = mFirebaseDatabase.getReference("Producto");
-
-
     }
-
 
     //Busqueda
     private void firebaseSearch(String searchText) {
 
-        String query = searchText.toLowerCase();
+        //String query = searchText.toLowerCase();
 
-        Query firebaseSearchQuery = mRef.orderByChild("apellido").startAt(query).endAt(query + "\uf8ff");
+        Query firebaseSearchQuery = mRef.orderByChild("nombre").startAt(searchText).endAt(searchText + "\uf8ff");
 
         FirebaseRecyclerAdapter<Producto, ViewHolder> firebaseRecyclerAdapter =
                 new FirebaseRecyclerAdapter<Producto, ViewHolder>(
@@ -71,14 +67,11 @@ public class PostsListActivity extends AppCompatActivity {
                     protected void populateViewHolder(ViewHolder viewHolder, Producto producto, int i) {
 
                         viewHolder.setDetails(getApplicationContext(),producto.getNombre(),"Descripción: "+producto.getApellido(),"S/"+producto.getPassword()+" soles",producto.getCorreo());
-
                     }
                 };
 
         mRecyclerView.setAdapter(firebaseRecyclerAdapter);
     }
-
-
 
     @Override
     protected void onStart() {
@@ -130,7 +123,6 @@ public class PostsListActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-
     }
 }
 
